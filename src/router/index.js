@@ -13,6 +13,7 @@ import childCom3 from '@/components/childCom3'
 import test from '@/components/test'
 import vuxTest from '@/components/vuxTest'
 import MarqueeTest from '@/components/MarqueeTest'
+import classTest from '@/components/classTest'
 Vue.use(Router)
 
 export default new Router({
@@ -81,6 +82,11 @@ export default new Router({
       path: '/MarqueeTest',
       name: 'MarqueeTest',
       component: MarqueeTest
+    },
+    {
+      path: '/classTest',
+      name: 'classTest',
+      component: classTest
     }
   ]
 })

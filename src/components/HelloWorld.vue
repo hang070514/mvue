@@ -5,6 +5,7 @@
     <h2 @click="jump('/index')">插槽demo</h2>
     <h2 @click="jump('/vuxTest')">vux测试</h2>
     <h2 @click="jump('/MarqueeTest')">Marquee测试</h2>
+    <h2 @click="jump('/classTest')">动态绑定class</h2>
     <!--<router-link :to="{name:'computed',params:{username:'zhang',id:'1234'}}">hello world</router-link>-->
     <router-link :to="{name:'computed',query:{username:'zhangq',id:'12345'}}">hello world</router-link>
     <router-link :to="{name:'parent'}">parent</router-link>
