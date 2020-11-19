@@ -23,20 +23,33 @@
              @on-hide="onHide">
       <p style="text-align:center;">{{ tip }}</p>
     </confirm>
+    <div class="geng">
+      <span>更换</span>
+      <selector  class="mSelector"  placeholder="请选择"  :options="list" v-model="defaultValue" direction="rtl" @on-change="onChange"></selector>
+    </div>
+
   </div>
 </template>
 
 <script>
-  import { Confirm } from 'vux'
+  import { Confirm, Selector } from 'vux'
   export default {
     name: 'vuxTest',
     components: {
-       Confirm
+       Confirm,
+       Selector
     },
     data() {
       return {
         showConfirm: false,
-        tip: '我是提示内容'
+        tip: '我是提示内容',
+        list: [{
+          key: 0,
+          value: "军人身份"
+        },{
+          key: 1,
+          value: "汪瓅韎"
+        }]
       }
     },
     methods: {
@@ -86,10 +99,24 @@
       onShow () {
         console.log('on show')
       },
+      onChange(value) {
+        console.log('value====', value)
+      }
     }
   }
 </script>
 
 <style scoped>
-
+  .geng{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 60px;
+  }
+  .mSelector{
+    position: absolute;
+    opacity: 0;
+  }
 </style>

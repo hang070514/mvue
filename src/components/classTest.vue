@@ -19,6 +19,8 @@ export default {
     setTimeout(() => {
       this.flag2 = true
     }, 3000)
+    console.log('process.env.NODE_ENV====', process.env.NODE_ENV)
+    //  this.flag1()
   },
   computed: {
     classObject () {
@@ -29,7 +31,9 @@ export default {
     }
   },
   methods: {
-
+    flag1() {
+      console.log('hhhhh')
+    }
   }
 }
 </script>

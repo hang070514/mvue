@@ -6,6 +6,9 @@
     <h2 @click="jump('/vuxTest')">vux测试</h2>
     <h2 @click="jump('/MarqueeTest')">Marquee测试</h2>
     <h2 @click="jump('/classTest')">动态绑定class</h2>
+    <h2 @click="jump('/eventTest')">冒泡/捕获事件</h2>
+    <h2 @click="jump('/swiperTest')">swiper轮播图</h2>
+    <h2 @click="jump('/scrollTest')">超出宽度出现横向滚动条</h2>
     <!--<router-link :to="{name:'computed',params:{username:'zhang',id:'1234'}}">hello world</router-link>-->
     <router-link :to="{name:'computed',query:{username:'zhangq',id:'12345'}}">hello world</router-link>
     <router-link :to="{name:'parent'}">parent</router-link>

@@ -14,6 +14,9 @@ import test from '@/components/test'
 import vuxTest from '@/components/vuxTest'
 import MarqueeTest from '@/components/MarqueeTest'
 import classTest from '@/components/classTest'
+import eventTest from '@/components/eventTest'
+import swiperTest from '@/components/swiperTest'
+import scrollTest from '@/components/scrollTest'
 Vue.use(Router)
 
 export default new Router({
@@ -87,6 +90,21 @@ export default new Router({
       path: '/classTest',
       name: 'classTest',
       component: classTest
+    },
+    {
+      path: '/eventTest',
+      name: 'eventTest',
+      component: eventTest
+    },
+    {
+      path: '/swiperTest',
+      name: 'swiperTest',
+      component: swiperTest
+    },
+    {
+      path: '/scrollTest',
+      name: 'scrollTest',
+      component: scrollTest
     }
   ]
 })
