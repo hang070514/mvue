@@ -5,6 +5,10 @@ import App from './App'
 import router from './router'
 import { AlertPlugin, ConfirmPlugin, ToastPlugin } from 'vux'
 
+var echarts = require('echarts')
+// var echarts = require('echarts')
+Vue.prototype.$echarts = echarts
+
 Vue.use(AlertPlugin)
 Vue.use(ConfirmPlugin)
 Vue.use(ToastPlugin)

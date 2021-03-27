@@ -17,6 +17,11 @@ import classTest from '@/components/classTest'
 import eventTest from '@/components/eventTest'
 import swiperTest from '@/components/swiperTest'
 import scrollTest from '@/components/scrollTest'
+import watchTest from '@/components/watchTest'
+import computedTest from '@/components/computedTest'
+import father from '../view/demo1/father'
+import father2 from '../view/demo2/father'
+import list from '../view/demo3/index'
 Vue.use(Router)
 
 export default new Router({
@@ -105,6 +110,31 @@ export default new Router({
       path: '/scrollTest',
       name: 'scrollTest',
       component: scrollTest
+    },
+    {
+      path: '/watchTest',
+      name: 'watchTest',
+      component: watchTest
+    },
+    {
+      path: '/computedTest',
+      name: 'computedTest',
+      component: computedTest
+    },
+    {
+      path: '/father',
+      name: 'father',
+      component: father
+    },
+    {
+      path: '/father2',
+      name: 'father2',
+      component: father2
+    },
+    {
+      path: '/list',
+      name: 'list',
+      component: list
     }
   ]
 })

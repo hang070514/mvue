@@ -23,21 +23,29 @@
              @on-hide="onHide">
       <p style="text-align:center;">{{ tip }}</p>
     </confirm>
-    <div class="geng">
+   <!-- <div class="geng">
       <span>更换</span>
       <selector  class="mSelector"  placeholder="请选择"  :options="list" v-model="defaultValue" direction="rtl" @on-change="onChange"></selector>
+    </div>-->
+    <div class="weui-cellaa">
+      <div class="weui-cells-left">左边文字</div>
+      <div class="weui-cells-right">右边文字控件</div>
     </div>
 
+    <img src="../img/er.jpg">
+
+    <checklist title="测试" :options="inlineDescList" v-model="inlineDescListValue" @on-change="change"></checklist>
   </div>
 </template>
 
 <script>
-  import { Confirm, Selector } from 'vux'
+  import { Confirm, Selector, Checklist } from 'vux'
   export default {
     name: 'vuxTest',
     components: {
        Confirm,
-       Selector
+       Selector,
+      Checklist
     },
     data() {
       return {
@@ -49,7 +57,13 @@
         },{
           key: 1,
           value: "汪瓅韎"
-        }]
+        }],
+        inlineDescList: [
+          {key: '1', value: 'Tiger is good', inlineDesc: 'Tiger is the king of mountain'},
+          {key: '2', value: 'Lion is better', inlineDesc: 'Lion is the king of woods'},
+          {key: '3', value: 'Camel is best, no inline-desc'}
+        ],
+        inlineDescListValue: []
       }
     },
     methods: {
@@ -101,12 +115,16 @@
       },
       onChange(value) {
         console.log('value====', value)
+      },
+      change (val, label) {
+        console.log('change====', val)
+        console.log('this.inlineDescListValue======', this.inlineDescListValue)
       }
     }
   }
 </script>
 
-<style scoped>
+<style scoped lang="less">
   .geng{
     position: relative;
     display: flex;
@@ -118,5 +136,15 @@
   .mSelector{
     position: absolute;
     opacity: 0;
+  }
+  .weui-cellaa{
+    padding: 10px 15px;
+    display: flex;
+    .weui-cells-left{
+      flex: 1;
+    }
+    .weui-cells-right{
+
+    }
   }
 </style>

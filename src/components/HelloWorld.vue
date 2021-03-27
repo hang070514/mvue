@@ -9,6 +9,10 @@
     <h2 @click="jump('/eventTest')">冒泡/捕获事件</h2>
     <h2 @click="jump('/swiperTest')">swiper轮播图</h2>
     <h2 @click="jump('/scrollTest')">超出宽度出现横向滚动条</h2>
+    <h2 @click="jump('/watchTest')">watch</h2>
+    <h2 @click="jump('/computedTest')">computed</h2>
+    <h2 @click="jump('/father')">父组件向子组件传递数据</h2>
+    <h2 @click="jump('/father2')">子组件向父组件传递数据</h2>
     <!--<router-link :to="{name:'computed',params:{username:'zhang',id:'1234'}}">hello world</router-link>-->
     <router-link :to="{name:'computed',query:{username:'zhangq',id:'12345'}}">hello world</router-link>
     <router-link :to="{name:'parent'}">parent</router-link>
@@ -37,8 +41,12 @@ export default {
     }
   },
   created (){
+    //  console.log('this====', this)
+    console.log('this.msg====', this.msg)
+    console.log('this.$data.msg====', this.$data.msg)
+    console.log('this._data.msg====', this._data.msg)
     this.config = apiConfig.baseUrl;
-    console.log('this.config=====',this.config);
+    // console.log('this.config=====',this.config);
     axios.post(this.config,
       {
         location:"39.88669,116.64201",
@@ -52,7 +60,7 @@ export default {
     })
 
     let str = 'asd';
-    console.log(str);
+    // console.log(str);
 
     let p = new Promise(function(resolve,reject){
       setTimeout(function(){

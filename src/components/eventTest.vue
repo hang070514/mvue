@@ -11,9 +11,11 @@ export default {
   name: 'eventTest',
   methods: {
     parentClick () {
+      consoles.log('hhhhh')
       console.log('我是parent')
     },
     childClick () {
+      consoles.log('hhhhh')
       console.log('我是child')
     }
   }
